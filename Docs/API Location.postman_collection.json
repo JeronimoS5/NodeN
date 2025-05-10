@@ -1,0 +1,375 @@
+{
+	"info": {
+		"_postman_id": "0969d7e4-9729-49e7-89aa-bd9bfb83c98f",
+		"name": "API Location",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42412401"
+	},
+	"item": [
+		{
+			"name": "Locations",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/locations",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"locations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TypeDocs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/typedocs",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"typedocs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "States",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/locations/states",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"locations",
+						"states"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "States By Code",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"123\",\r\n  \"name\": \"Ana Gómez\",\r\n  \"age\": 35,\r\n  \"gender\": \"F\",\r\n  \"doc_type\": \"CC\",\r\n  \"doc_number\": \"123456789\",\r\n  \"location_code\": \"05001\",\r\n  \"parent_id\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/locations/by-state/13",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"locations",
+						"by-state",
+						"13"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Location By Code",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/locations/by-code/05002",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"locations",
+						"by-code",
+						"05002"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Capitals",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/locations/capitals",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"locations",
+						"capitals"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create People",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"125\",\r\n    \"name\": \"Juan Pérez\",\r\n    \"gender\": \"M\",\r\n    \"birthdate\": \"2010-09-30\",\r\n    \"location_code\": \"05001\",\r\n    \"type_doc\": \"TI\",\r\n    \"parent_id\": null\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/people",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"people"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read People",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/people",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"people"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "People By Code",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/people/123",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"people",
+						"123"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update People",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"id\": \"124\",\r\n        \"name\": \"Laura Méndez\",\r\n        \"gender\": \"F\",\r\n        \"birthdate\": \"1991-07-15\",\r\n        \"location_code\": \"05001\",\r\n        \"type_doc\": \"CC\",\r\n        \"parent_id\": \"123\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/people/124",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"people",
+						"124"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete People",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/people/123",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"people",
+						"123"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "People By Location",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/people/by-location/05001",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"people",
+						"by-location",
+						"05001"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "People Filter",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/people/filter?location_code=05001&type_doc=CC&gender=F",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"people",
+						"filter"
+					],
+					"query": [
+						{
+							"key": "location_code",
+							"value": "05001"
+						},
+						{
+							"key": "type_doc",
+							"value": "CC"
+						},
+						{
+							"key": "gender",
+							"value": "F"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Adult Daughters",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/people/adult-daughters",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"people",
+						"adult-daughters"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
